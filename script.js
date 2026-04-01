@@ -70,3 +70,12 @@ if (themeToggle) {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 }
+// Header scroll effect
+const header = document.querySelector('.topbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
